@@ -1,5 +1,6 @@
 package inventory.controller;
 
+import inventory.exceptions.IsValidProductException;
 import inventory.model.Part;
 import inventory.model.Product;
 import inventory.service.InventoryService;
@@ -28,7 +29,6 @@ public class AddProductController implements Initializable, Controller {
     private Parent scene;
     private ObservableList<Part> addParts = FXCollections.observableArrayList();
     private String errorMessage = new String();
-    private int productId;
 
     private InventoryService service;
     
@@ -37,9 +37,6 @@ public class AddProductController implements Initializable, Controller {
 
     @FXML
     private TextField maxTxt;
-
-    @FXML
-    private TextField productIdTxt;
 
     @FXML
     private TextField nameTxt;
@@ -205,17 +202,9 @@ public class AddProductController implements Initializable, Controller {
         errorMessage = "";
         
         try {
-            errorMessage = Product.isValidProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts, errorMessage);
-            if(errorMessage.length() > 0) {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Error Adding Part!");
-                alert.setHeaderText("Error!");
-                alert.setContentText(errorMessage);
-                alert.showAndWait();
-            } else {
-                service.addProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts);
-                displayScene(event, "/fxml/MainScreen.fxml");
-            }
+            service.isValidProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts, errorMessage);
+            service.addProduct(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), addParts);
+            displayScene(event, "/fxml/MainScreen.fxml");
         } catch (NumberFormatException e) {
             System.out.println("Form contains blank field.");
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -224,7 +213,13 @@ public class AddProductController implements Initializable, Controller {
             alert.setContentText("Form contains blank field.");
             alert.showAndWait();
         }
-
+        catch (IsValidProductException ex){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error Adding Part!");
+            alert.setHeaderText("Error!");
+            alert.setContentText(errorMessage);
+            alert.showAndWait();
+        }
     }
 
     /**
