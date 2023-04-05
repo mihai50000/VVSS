@@ -3,18 +3,19 @@ package inventory.service;
 import inventory.exceptions.IsValidProductException;
 import inventory.model.*;
 import inventory.repository.InventoryRepository;
+import inventory.repository.InventoryRepositoryFile;
 import javafx.collections.ObservableList;
 
 public class InventoryService {
 
-    private InventoryRepository repo;
-    public InventoryService(InventoryRepository repo){
+    private InventoryRepositoryFile repo;
+    public InventoryService(InventoryRepositoryFile repo){
         this.repo =repo;
     }
 
-    public void addInhousePart(String name, double price, int inStock, int min, int  max, int partDynamicValue){
+    public Part addInhousePart(String name, double price, int inStock, int min, int  max, int partDynamicValue){
         InhousePart inhousePart = new InhousePart(repo.getAutoPartId(), name, price, inStock, min, max, partDynamicValue);
-        repo.addPart(inhousePart);
+        return repo.addPart(inhousePart);
     }
 
     public void addOutsourcePart(String name, double price, int inStock, int min, int  max, String partDynamicValue){

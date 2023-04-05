@@ -1,0 +1,23 @@
+
+c
+java:S3655°"LCall "result.isPresent()" or "!result.isEmpty()" before accessing the value.(ÃÇûŞ
+c
+java:S3655Ò"LCall "result.isPresent()" or "!result.isEmpty()" before accessing the value.(ÃÇûŞ
+—
+java:S1186~"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦Ê—
+œ
+java:S1186["€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§úîúıÿÿÿÿ
+q
+java:S1450""[Remove the "errorMessage" field and declare it as a local variable in the relevant methods.(ÊÃ‘æ
+j
+java:S1450 "TRemove the "scene" field and declare it as a local variable in the relevant methods.(‹ôÒ¡
+o
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(‹ğÑœıÿÿÿÿ
+6
+java:S2129"" Remove this "String" constructor(ÊÃ‘æ
+R	java:S125"<This block of commented-out lines of code should be removed.( ÆüÖ
+T	java:S106±"9Replace this use of System.out or System.err by a logger.(ò¤áÿûÿÿÿÿ
+T	java:S106´"9Replace this use of System.out or System.err by a logger.(½ğöÈıÿÿÿÿ
+T	java:S106Ó"9Replace this use of System.out or System.err by a logger.(„Åé£úÿÿÿÿ
+O	java:S106Ö"9Replace this use of System.out or System.err by a logger.(¤Õï«
+T	java:S106î"9Replace this use of System.out or System.err by a logger.(Éâ…ºıÿÿÿÿ
