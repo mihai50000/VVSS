@@ -24,21 +24,14 @@ public class AddPartController implements Initializable, Controller {
     private Parent scene;
     private boolean isOutsourced = true;
     private String errorMessage = new String();
-    private int partId;
 
     private InventoryService service;
-    
-    @FXML
-    private RadioButton inhouseRBtn;
 
     @FXML
     private RadioButton outsourcedRBtn;
     
     @FXML
     private Label addPartDynamicLbl;
-
-    @FXML
-    private TextField partIdTxt;
 
     @FXML
     private TextField nameTxt;
@@ -152,7 +145,7 @@ public class AddPartController implements Initializable, Controller {
         errorMessage = "";
         
         try {
-            errorMessage = Part.isValidPart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), errorMessage);
+            errorMessage = service.isValidPart(name, Double.parseDouble(price), Integer.parseInt(inStock), Integer.parseInt(min), Integer.parseInt(max), errorMessage);
             if(errorMessage.length() > 0) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Error Adding Part!");
