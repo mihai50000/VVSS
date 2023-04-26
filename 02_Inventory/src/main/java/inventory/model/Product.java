@@ -4,6 +4,8 @@ package inventory.model;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.Objects;
+
 
 public class Product {
     
@@ -25,6 +27,15 @@ public class Product {
         this.min = min;
         this.max = max;
         this.associatedParts= partList;
+    }
+
+    public Product(int productId, String name, double price, int inStock, int min, int max){
+        this.productId = productId;
+        this.name = name;
+        this.price = price;
+        this.inStock = inStock;
+        this.min = min;
+        this.max = max;
     }
     
     // Getters
@@ -105,5 +116,18 @@ public class Product {
     public String toString() {
         return "P,"+this.productId+","+this.name+","+this.price+","+this.inStock+","+
                 this.min+","+this.max;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return productId == product.productId && Double.compare(product.price, price) == 0 && inStock == product.inStock && min == product.min && max == product.max && Objects.equals(associatedParts, product.associatedParts) && Objects.equals(name, product.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(associatedParts, productId, name, price, inStock, min, max);
     }
 }
