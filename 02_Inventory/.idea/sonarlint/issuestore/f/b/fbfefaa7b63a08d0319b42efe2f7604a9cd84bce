@@ -1,0 +1,8 @@
+
+W	java:S107/"<Method has 8 parameters, which is greater than 7 authorized.(²ÅÓ78ô¸‰õ0
+W	java:S1074"<Method has 8 parameters, which is greater than 7 authorized.(çÄû"8ô¸‰õ0
+X	java:S1079"<Method has 8 parameters, which is greater than 7 authorized.(¥Á¥±8ô¸‰õ0
+\
+java:S1155Œ">Use isEmpty() to check whether the collection is empty or not.(ƒ·»Â8§ô¸‰õ0
+g
+java:S1128"ERemove this unused import 'inventory.repository.InventoryRepository'.(ìçº¨ÿÿÿÿÿ8¨ô¸‰õ0

@@ -23,3 +23,17 @@ W
 'src/main/java/inventory/model/Part.java,f\d\fd1a9dc81ddf20578ac17075e7f75e2bd44285ad
 Q
 !src/main/java/inventory/Main.java,e\c\ece56c845d15f2c366abf3aa1a07420ba35ea01b
+i
+9src/main/java/inventory/repository/ProductRepository.java,6\2\62b718e516c3bd8597ee1cc92af4a235fe19c416
+f
+6src/main/java/inventory/repository/PartRepository.java,8\e\8e261b5e639fe0ec7cf72a1c62e09d9d52b5e2ed
+e
+5src/main/java/inventory/service/InventoryService.java,f\b\fbfefaa7b63a08d0319b42efe2f7604a9cd84bce
+s
+Csrc/main/java/inventory/repository/InventoryRepositoryInMemory.java,9\5\95371750025dc9d487c62116b76729be180c0e8e
+k
+;src/main/java/inventory/repository/InventoryRepository.java,9\5\959d3be9e6d77120b22cdef08892aae567b3ccfc
+h
+8src/test/java/mockLab4Tests/InventoryRepositoryTest.java,e\b\eb6f6014dfe53e1b3b1248dbf2d0d1d2824db961
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec

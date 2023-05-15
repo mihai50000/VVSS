@@ -1,0 +1,17 @@
+
+3
+java:S1643”"Use a StringBuilder instead.(ŠÑ‡à
+b
+java:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ãÈˆ¦
+c
+java:S2095ˆ"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(ù»ı
+b
+java:S2095Q"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ãÈˆ¦
+V	java:S125"<This block of commented-out lines of code should be removed.(§¨Ö¿úÿÿÿÿ
+Z
+java:S2147&"DCombine this catch with the one at line 36, which has the same body.(ï­£Ä
+V	java:S125K"<This block of commented-out lines of code should be removed.(§¨Ö¿úÿÿÿÿ
+Z
+java:S2147["DCombine this catch with the one at line 89, which has the same body.(ï­£Ä
+W	java:S125€"<This block of commented-out lines of code should be removed.(§¨Ö¿úÿÿÿÿ
+T	java:S106Š"9Replace this use of System.out or System.err by a logger.(Ñ£±Ôúÿÿÿÿ
